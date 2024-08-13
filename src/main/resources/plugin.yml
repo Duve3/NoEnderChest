@@ -1,0 +1,6 @@
+name: NoEnderChest
+version: '1.0-SNAPSHOT'
+main: me.duve3.noEnderChest.NoEnderChest
+api-version: '1.21'
+authors: [ duve3 ]
+description: blocks certain items from going into enderchests
