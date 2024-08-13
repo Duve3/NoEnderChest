@@ -14,6 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public final class NoEnderChest extends JavaPlugin implements Listener {
 
@@ -48,7 +49,7 @@ public final class NoEnderChest extends JavaPlugin implements Listener {
 
     private void shulkerBoxCheck(Material itemMoved, Material item, InventoryClickEvent e, Player player) {
         if (isShulkerBox(itemMoved)) {
-            ShulkerBox shulker = (ShulkerBox) ((BlockStateMeta) e.getCurrentItem().getItemMeta()).getBlockState();
+            ShulkerBox shulker = (ShulkerBox) ((BlockStateMeta) Objects.requireNonNull(Objects.requireNonNull(e.getCurrentItem()).getItemMeta())).getBlockState();
             for (ItemStack si : shulker.getInventory().getContents()) {
                 if (si == null) {
                     continue;
