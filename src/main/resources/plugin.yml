@@ -1,5 +1,5 @@
 name: NoEnderChest
-version: '1.0-SNAPSHOT'
+version: '1.0'
 main: me.duve3.noEnderChest.NoEnderChest
 api-version: '1.21'
 authors: [ duve3 ]
